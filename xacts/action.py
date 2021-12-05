@@ -8,7 +8,7 @@ class Action:
         assert (
             self.operation == Action.READ_ACTION
             or self.operation == Action.WRITE_ACTION
-        )
+        ), "For {}: Operation must be {} or {}".format(transaction_info, Action.READ_ACTION, Action.WRITE_ACTION)
 
         self.transaction = transaction_info[1:-1]
         self.object = transaction_info[-1]

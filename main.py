@@ -18,7 +18,7 @@ def main():
     print(checker.is_conflict_serializable())
 
     print("\nEquivalent Serial Schedules: ")
-    for schedule in checker.get_serial_schedules():
+    for schedule in sorted(checker.get_serial_schedules()):
         print(schedule)
 
 
