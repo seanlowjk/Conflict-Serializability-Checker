@@ -4,7 +4,9 @@ from json import load
 
 
 def parse_cli():
-    cli_parser = ArgumentParser(description="Follow the following arguments to provide your sequence of transactions")
+    cli_parser = ArgumentParser(
+        description="Follow the following arguments to provide your sequence of transactions"
+    )
 
     cli_parser.add_argument(
         "-i",
