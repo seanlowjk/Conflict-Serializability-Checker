@@ -1,6 +1,6 @@
 # Conflict-Serializability-Checker
 
-This mini CLI tool serves to help students taking CS3223 Database Systems 
+This program serves to help students taking CS3223 Database Systems 
 Implementation (NUS) to understand the idea of conflict serializability. 
 
 ## Prerequisites 
