@@ -15,5 +15,14 @@ class PrecedenceGraph:
     
     def has_conflicting_precedence(self, from_xact, to_xact):
         from_xact_no = from_xact.transaction
-        to_xact_no = to_xact.transactio
+        to_xact_no = to_xact.transaction
         return to_xact_no in self.graph and from_xact_no in self.graph[to_xact_no]
+
+    def get_precedences(self):
+        precedences = []
+
+        for from_xact_no, to_xact_nos in self.graph.items():
+            for to_xact_no in to_xact_nos.keys():
+                precedences.append((from_xact_no, to_xact_no))
+
+        return precedences
